@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogIn">
+    tools:context=".SignUp">
 
     <EditText
-        android:id="@+id/txtPass"
+        android:id="@+id/txtSMail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
@@ -19,36 +19,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtSPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="Şifre"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
+        app:layout_constraintEnd_toEndOf="@+id/txtSMail"
+        app:layout_constraintStart_toStartOf="@+id/txtSMail"
+        app:layout_constraintTop_toBottomOf="@+id/txtSMail" />
 
-    <Button
-        android:id="@+id/btnLogin"
+    <EditText
+        android:id="@+id/txtSPass2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="GİRİŞ"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        android:ems="10"
+        android:hint="Tekrar Şifre"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/txtSPass"
+        app:layout_constraintStart_toStartOf="@+id/txtSPass"
+        app:layout_constraintTop_toBottomOf="@+id/txtSPass" />
 
     <Button
-        android:id="@+id/btnSignup"
+        android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:onClick="signUpAct"
+        android:layout_marginTop="128dp"
+        android:onClick="signUp"
         android:text="KAYIT OL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
+        app:layout_constraintEnd_toEndOf="@+id/txtSPass2"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/txtSPass2"
+        app:layout_constraintTop_toBottomOf="@+id/txtSPass2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
